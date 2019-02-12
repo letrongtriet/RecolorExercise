@@ -36,8 +36,6 @@ class BookVolumesTableViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "ShelfCustomCell", bundle: nil), forCellReuseIdentifier: "cellid")
         
-        tableView.rowHeight = 200
-        
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false
@@ -74,6 +72,10 @@ class BookVolumesTableViewController: UITableViewController {
         let safariVC = SFSafariViewController(url: url)
         self.present(safariVC, animated: true, completion: nil)
         safariVC.delegate = self
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 }
 
