@@ -28,11 +28,21 @@ class BookShelvesDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath) as! BookShelvesCustomCell
         let shelf = bookShelves?.items[indexPath.row]
-
-        cell.textLabel?.text = shelf?.title
-        cell.detailTextLabel?.text = "Updated: \(shelf?.volumesLastUpdated ?? "")"
+        
+        cell.title.text = shelf?.title
+        
+        var tempString = ""
+        let date = Date()
+        
+        if shelf?.updated != nil {
+            tempString = "Updated: \(date.normalizeDate(from: shelf!.updated))"
+        }
+        
+        print(tempString)
+        
+        cell.updatedDate.text = tempString
         
         return cell
     }

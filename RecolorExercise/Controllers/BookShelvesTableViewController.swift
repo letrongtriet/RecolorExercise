@@ -28,6 +28,8 @@ class BookShelvesTableViewController: UITableViewController {
         tableView.dataSource = dataSource
         
         tableView.tableFooterView = UIView()
+        
+        tableView.register(UINib(nibName: "BookShelvesCustomCell", bundle: nil), forCellReuseIdentifier: "cellid")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,6 +40,10 @@ class BookShelvesTableViewController: UITableViewController {
         self.tempTitle = title
         
         self.performSegue(withIdentifier: "showBookShelfDetail", sender: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

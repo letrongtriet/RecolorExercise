@@ -22,6 +22,9 @@
 		858410792212BA330066961A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858410782212BA330066961A /* Assets.xcassets */; };
 		8584107C2212BA330066961A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8584107A2212BA330066961A /* LaunchScreen.storyboard */; };
 		85D1C3632213586200B05501 /* Array+RecolorExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1C3622213586200B05501 /* Array+RecolorExercise.swift */; };
+		85E3B9992213EFDF00566B72 /* Date+RecolorExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3B9982213EFDF00566B72 /* Date+RecolorExercise.swift */; };
+		85E3B99D2213F37E00566B72 /* BookShelvesCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3B99B2213F37E00566B72 /* BookShelvesCustomCell.swift */; };
+		85E3B99E2213F37E00566B72 /* BookShelvesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E3B99C2213F37E00566B72 /* BookShelvesCustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		8584107B2212BA330066961A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8584107D2212BA330066961A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D1C3622213586200B05501 /* Array+RecolorExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RecolorExercise.swift"; sourceTree = "<group>"; };
+		85E3B9982213EFDF00566B72 /* Date+RecolorExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+RecolorExercise.swift"; sourceTree = "<group>"; };
+		85E3B99B2213F37E00566B72 /* BookShelvesCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelvesCustomCell.swift; sourceTree = "<group>"; };
+		85E3B99C2213F37E00566B72 /* BookShelvesCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookShelvesCustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,6 @@
 			children = (
 				8542D98822130DA400249D64 /* BookShelvesDataSource.swift */,
 				8542D98E2213131D00249D64 /* BookVolumesDataSource.swift */,
-				8542D99E221330B500249D64 /* ShelfCustomCell.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -86,10 +91,10 @@
 		8542D99C22132F4300249D64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8542D99F221330B500249D64 /* ShelfCustomCell.xib */,
 				858410752212BA300066961A /* Main.storyboard */,
 				858410782212BA330066961A /* Assets.xcassets */,
 				8584107A2212BA330066961A /* LaunchScreen.storyboard */,
+				85E3B99F2213F39A00566B72 /* XIB */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				8542D98A22130FA400249D64 /* Decoder+RecolorExercise.swift */,
 				8542D9A22213478B00249D64 /* UIImage+RecolorExercise.swift */,
 				85D1C3622213586200B05501 /* Array+RecolorExercise.swift */,
+				85E3B9982213EFDF00566B72 /* Date+RecolorExercise.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -126,12 +132,31 @@
 				858410712212BA300066961A /* AppDelegate.swift */,
 				8542D99C22132F4300249D64 /* Resources */,
 				8542D99B22132F2B00249D64 /* View Model */,
+				85E3B99A2213F35600566B72 /* Custom Cell */,
 				8542D99A22132F2300249D64 /* Controllers */,
 				8542D9672212F64900249D64 /* Models */,
 				8542D99D22132F5200249D64 /* Helper */,
 				8584107D2212BA330066961A /* Info.plist */,
 			);
 			path = RecolorExercise;
+			sourceTree = "<group>";
+		};
+		85E3B99A2213F35600566B72 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8542D99E221330B500249D64 /* ShelfCustomCell.swift */,
+				85E3B99B2213F37E00566B72 /* BookShelvesCustomCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		85E3B99F2213F39A00566B72 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				85E3B99C2213F37E00566B72 /* BookShelvesCustomCell.xib */,
+				8542D99F221330B500249D64 /* ShelfCustomCell.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E3B99E2213F37E00566B72 /* BookShelvesCustomCell.xib in Resources */,
 				8584107C2212BA330066961A /* LaunchScreen.storyboard in Resources */,
 				8542D9A1221330B500249D64 /* ShelfCustomCell.xib in Resources */,
 				858410792212BA330066961A /* Assets.xcassets in Resources */,
@@ -206,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E3B99D2213F37E00566B72 /* BookShelvesCustomCell.swift in Sources */,
+				85E3B9992213EFDF00566B72 /* Date+RecolorExercise.swift in Sources */,
 				8542D98922130DA400249D64 /* BookShelvesDataSource.swift in Sources */,
 				8542D9662212F5BA00249D64 /* BookShelvesTableViewController.swift in Sources */,
 				8542D96F2212F77800249D64 /* BookVolumes.swift in Sources */,
