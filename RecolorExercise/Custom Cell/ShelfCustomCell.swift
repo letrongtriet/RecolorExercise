@@ -13,4 +13,11 @@ class ShelfCustomCell: UITableViewCell {
     @IBOutlet weak var volumeTitle: UILabel!
     @IBOutlet weak var volumeVersion: UILabel!
     @IBOutlet weak var volumeDescription: UILabel!
+    
+    override func prepareForReuse() {
+        self.volumeImage.image = nil
+        self.volumeTitle.text?.removeAll()
+        self.volumeVersion.text?.removeAll()
+        self.volumeDescription.text?.removeAll()
+    }
 }

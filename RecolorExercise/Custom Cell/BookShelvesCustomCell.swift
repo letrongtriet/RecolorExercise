@@ -11,4 +11,9 @@ import UIKit
 class BookShelvesCustomCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var updatedDate: UILabel!
+    
+    override func prepareForReuse() {
+        self.title.text?.removeAll()
+        self.updatedDate.text?.removeAll()
+    }
 }
